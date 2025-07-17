@@ -1,1 +1,17 @@
 theme: Minima
+#remote_theme: mmistakes/jekyll-theme-basically-basic
+
+title: Zuos Weblog
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+sass:
+  quiet_deps: true
+  silence_deprecations: [import]
+
+minima:
+  skin: auto
+  show_excderpts: true
+  hide_site_feed_link: true
