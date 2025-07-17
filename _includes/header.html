@@ -12,8 +12,6 @@
         <span class="menu-icon"></span>
       </label>
 
-      {% include nav-items.html paths = page_paths %}
-
       div class="trigger">
         {%- for path in site.header_pages -%}
           {%- assign my_page = site.pages | where: "path", path | first -%}

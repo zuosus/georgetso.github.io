@@ -3,11 +3,12 @@ theme: Minima
 
 title: Zuos Weblog
 
-sass:
-  quiet_deps: true
-  silence_deprecations: [import]
-
 minima:
   skin: auto
   show_excerpts: true
   hide_site_feed_link: true
+
+sass:
+  quiet_deps: true
+  silence_deprecations: [import]
+
