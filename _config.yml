@@ -3,10 +3,6 @@ theme: Minima
 
 title: Zuos Weblog
 
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-
 sass:
   quiet_deps: true
   silence_deprecations: [import]
