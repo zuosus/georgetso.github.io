@@ -1,5 +1,4 @@
 theme: Minima
-#remote_theme: mmistakes/jekyll-theme-basically-basic
 
 title: Zuos Weblog
 
@@ -7,8 +6,3 @@ minima:
   skin: auto
   show_excerpts: true
   hide_site_feed_link: true
-
-sass:
-  quiet_deps: true
-  silence_deprecations: [import]
-
