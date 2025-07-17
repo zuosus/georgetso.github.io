@@ -1,2 +1,0 @@
-# georgetso.github.io
-blog
