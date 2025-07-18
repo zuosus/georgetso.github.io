@@ -12,7 +12,7 @@ For state management, cf D1 and KV are free and powerful.
 The defult build and deploy comamnd on Cloudflare is `wrangler deploy`, which does not work for opennextjs projects. Change them to
 ```
 build: pnpm opennextjs-cloudflare build
-deploy: pnpm opennextjs-cloudflare build && pnpm opennextjs-cloudflare deploy
+deploy: pnpm opennextjs-cloudflare deploy
 ```
 
 ---
