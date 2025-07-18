@@ -1,6 +1,6 @@
-remote_theme: "jekyll/minima@c6e74bb"
+remote_theme: "jekyll/minima@1e8a445"
 
-title: weblog
+title: Weblog
 
 minima:
   skin: auto
