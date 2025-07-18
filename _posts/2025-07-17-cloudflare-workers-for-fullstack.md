@@ -8,6 +8,13 @@ For websites, [@opennextjs/cloudflare](https://opennext.js.org/cloudflare/get-st
 
 For state management, cf D1 and KV are free and powerful.
 
+## Note
+The defult build and deploy comamnd on Cloudflare is `wrangler deploy`, which does not work for opennextjs projects. Change them to
+```
+build: pnpm opennextjs-cloudflare build
+deploy: pnpm opennextjs-cloudflare build && pnpm opennextjs-cloudflare deploy
+```
+
 ---
 
 
