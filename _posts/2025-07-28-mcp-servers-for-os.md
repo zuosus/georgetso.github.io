@@ -5,7 +5,7 @@ date: 2025-07-28
 
 We are living in exciting times. From Microsoft's Copilot to Apple's Apple Intelligence, both Windows and macOS are integrating AI features at an unprecedented pace. Even hardware manufacturers like AMD are branding their products as "AI CPUs." It feels as though AI and Large Language Models (LLMs) are poised to conquer every corner of cyberspace.
 
-After learning about MCP (Multi-agent Collaboration Platform) yesterday, a bold prediction came to my mind: **Operating systems may soon offer system-level MCP services.**
+After learning about MCP yesterday, a bold prediction came to my mind: **Operating systems may soon offer system-level MCP services.**
 
 What does this mean?
 
