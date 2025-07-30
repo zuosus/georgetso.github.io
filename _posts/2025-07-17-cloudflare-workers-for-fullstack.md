@@ -1,3 +1,8 @@
+---
+title: "Cloudflare worker for fullstack"
+date: 2025-07-24
+---
+
 ### Why
 Cloudflare workers are a powerful way to run services and websites, especially for SSG + CSR, which is a great solution for both SEO and performance. It also takes the burden off of devops and scale management, as Cloudflare handles the scaling and infrastructure. And it's free for starter projects.
 
