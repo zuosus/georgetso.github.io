@@ -1,7 +1,6 @@
 ---
 title: "The Great AI Quota Disparity: When GPT-5 Gives You Whispers and DeepSeek Gives You Symphony"
 date: 2025-08-09
-categories: [AI, Humor, Sarcasm]
 ---
 
 Ah, the luxurious life of an AI power user in 2025! Let me tell you about my recent experience with the pinnacle of AI technology: OpenAI's GPT-5.
