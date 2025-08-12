@@ -1,7 +1,6 @@
 ---
 title: "My Experience with Cursor AI Assistant"
 date: 2025-07-29 09:00:00 -0700
-categories: [AI, Development]
 ---
 
 Today I used Cursor membership for several coding tasks, and the experience was remarkable. Not only did it help me complete jobs efficiently, but it even identified a missing component in my previous work that I'd overlooked.
