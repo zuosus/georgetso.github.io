@@ -1,17 +1,17 @@
 ---
-title: "A Day of Merging: Unifying Frontend and Backend in a Single Cloudflare Worker"
+title: "Merging Frontend and Backend in a Single Cloudflare Worker"
 date: 2025-08-25
 ---
 
-Today, August 25, 2025, marks a significant step in the development of the `surname` project, focusing on unifying our frontend (OpenNext.js) and backend (Hono.dev) into a single Cloudflare Worker. This approach streamlines deployment and maintenance, moving away from separate deployments for each service.
+On August 25, 2025, a significant step was made in the development of the `surname` project, focusing on unifying the frontend (OpenNext.js) and backend (Hono.dev) into a single Cloudflare Worker. This approach streamlines deployment and maintenance, moving away from separate deployments for each service.
 
-### The Unification Challenge: One Worker to Rule Them All
+### The Unification Challenge
 
-Previously, our OpenNext.js frontend and Hono.dev backend were deployed as separate Cloudflare Workers. The goal was to merge them into a single project, allowing the backend API to be accessible under a `/api/*` path relative to the frontend's host. This simplifies domain management and internal routing.
+Previously, the OpenNext.js frontend and Hono.dev backend were deployed as separate Cloudflare Workers. The goal was to merge them into a single project, allowing the backend API to be accessible under a `/api/*` path relative to the frontend's host. This simplifies domain management and internal routing.
 
 ### Technical Solution: Merging Handlers
 
-The core of this unification lies in intelligently routing requests within a single Cloudflare Worker's `fetch` handler. By leveraging the `URL` object, we can inspect the request path and direct it to the appropriate handler:
+The core of this unification lies in routing requests within a single Cloudflare Worker's `fetch` handler. By leveraging the `URL` object, we can inspect the request path and direct it to the appropriate handler:
 
 ```typescript
 import { createHandler } from "opennextjs";
@@ -79,11 +79,11 @@ With the handlers merged, deployment simplifies to a single Cloudflare Worker. T
 }
 ```
 
-For deployment, `wrangler deploy` is the preferred tool. While `opennextjs-cloudflare deploy` exists, it's tailored for pure Next.js deployments. For a combined Hono and OpenNext.js project, a custom build script (e.g., using `esbuild` or `vite`) to bundle both handlers into a single `worker.js` file, followed by `wrangler deploy`, offers maximum flexibility and control.
+For deployment, `wrangler deploy` is the preferred tool. While `opennextjs-cloudflare deploy` exists, it's tailored for pure Next.js deployments. For a combined Hono and OpenNext.js project, a custom build script (e.g., using `esbuild` or `vite`) to bundle both handlers into a single `worker.js` file, followed by `wrangler deploy`, offers more flexibility and control.
 
 ### Understanding Cloudflare Resource Bindings
 
-A key insight during this process was clarifying the distinction between Cloudflare Dashboard resource names and `wrangler.jsonc` binding names for services like D1, KV, and R2.
+A key point is the distinction between Cloudflare Dashboard resource names and `wrangler.jsonc` binding names for services like D1, KV, and R2.
 
 *   **Dashboard Resource Name:** This is the name you see and manage in the Cloudflare console (e.g., `mydb` for a D1 database). It's primarily for internal identification and display. **Changing this name in the Dashboard does not affect your Worker code.**
 *   **Binding Name:** Defined in `wrangler.jsonc` (e.g., `"binding": "DB"`). This is the actual variable name exposed to your Worker code (e.g., `env.DB`). **Your code interacts solely with this binding name.**
@@ -92,4 +92,4 @@ This means that as long as the `binding` name in `wrangler.jsonc` remains consis
 
 ### Conclusion
 
-Unifying our frontend and backend into a single Cloudflare Worker has significantly simplified our project architecture. By carefully managing request routing and understanding Cloudflare's deployment mechanisms and resource bindings, we've achieved a more streamlined and efficient full-stack application. This merge represents a substantial effort towards improving the project's overall structure and maintainability.
+Unifying the frontend and backend into a single Cloudflare Worker simplifies the project architecture. By managing request routing and understanding Cloudflare's deployment mechanisms and resource bindings, a more streamlined and efficient full-stack application is achieved. This merge improves the project's overall structure and maintainability.

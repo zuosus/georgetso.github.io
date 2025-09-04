@@ -21,6 +21,3 @@ deploy: pnpm opennextjs-cloudflare deploy
 ```
 
 ---
-
-
-Sounds a great solution to starter projects.
